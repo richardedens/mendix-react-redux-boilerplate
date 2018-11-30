@@ -1,7 +1,7 @@
 # mendix-react-redux-boilerplate
 The Mendix Custom Widget - ReactJS - Redux boilerplate. Including ReactJS with ES6 - Babel, Redux, Mock API, VSCode snippets, Mocha test support, NodeJS - ExpressJS test server and webpack development and production build configurations.
 
-# What is in it for you!
+# Let's get this party started!
 
 ## Get Started
 1. **Install [Node 6](https://nodejs.org)**. Need to run multiple versions of Node? Use [nvm](https://github.com/creationix/nvm) or [nvm-windows](https://github.com/coreybutler/nvm-windows)
