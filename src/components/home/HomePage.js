@@ -9,7 +9,7 @@ class HomePage extends React.Component {
     const {context} = this.props;
     return (
       <div className="jumbotron">
-        <h1>Pluralsight Administration</h1>
+        <h1>Mendix Administration</h1>
         <p>React, Redux and React Router in ES6 for ultra-responsive web apps.</p>
         {context._type}
         <Link to="about" className="btn btn-primary btn-lg">Learn more</Link>
