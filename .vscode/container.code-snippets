@@ -1,0 +1,142 @@
+{
+  "React redux store": {
+    "scope": "javascript,react,javascriptreact",
+    "prefix": "react-redux-store",
+    "body": [
+      "import {createStore, applyMiddleware} from 'redux';\r" +
+      "import rootReducer from '../reducers';\r" +
+      "import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';\r" +
+      "import thunk from 'redux-thunk';\r" +
+      "\r" +
+      "export default function configureStore(initialState) {\r" +
+      "  return createStore(\r" +
+      "    rootReducer,\r" +
+      "    initialState,\r" +
+      "    applyMiddleware(thunk, reduxImmutableStateInvariant())\r" +
+      "  );\r" +
+      "}\r"
+    ],
+    "description": "The react redux store code snippet allows you to implement a store in seconds."
+  },
+  "React redux root reduxer": {
+    "scope": "javascript,react,javascriptreact",
+    "prefix": "react-redux-root-reducer",
+    "body": [
+      "import {combineReducers} from 'redux';\r"+
+      "import $1s from './$1Reducer';\r"+
+      "\r"+
+      "const rootReducer = combineReducers({\r"+
+      "  $1s\r"+
+      "});\r"+
+      "\r"+
+      "export default rootReducer;\r"+
+    ],
+    "description": "The react redux root reducer create an autoload for reducers."
+  },
+  "React redux reducer": {
+    "scope": "javascript,react,javascriptreact",
+    "prefix": "react-redux-reducer",
+    "body": [
+      "import * as types from '../actions/actionTypes';\r" +
+      "import initialState from './initialState';\r" +
+      "\r" +
+      "export default function $1Reducer(state = initialState.$1s, action) {\r" +
+      "  switch(action.type) {\r" +
+      "    case types.LOAD_$2S_SUCCESS:\r" +
+      "      return action.$1s;\r" +
+      "      \r" +
+      "    default:\r" +
+      "      return state;\r" +
+      "  }\r" +
+      "}\r"
+    ],
+    "description": "The react reducer code snippet allows you to implement a reducer in seconds."
+  },
+  "React redux action": {
+    "scope": "javascript,react,javascriptreact",
+    "prefix": "react-redux-action",
+    "body": [
+      "import * as types from './actionTypes';\r"+
+      "import $1Api from '../api/mock/$1Api';\r"+
+      "\r"+
+      "export function load$2sSuccess($1s) {\r"+
+      "  return { type: types.LOAD_$3S_SUCCESS, $1s };\r"+
+      "}\r"+
+      "\r"+
+      "export function load$2s() {\r"+
+      "  return function(dispatch) {\r"+
+      "    return $1Api.getAll$2s().then($1s => {\r"+
+      "      dispatch(load$2sSuccess($1s));\r"+
+      "    }).catch(error => {\r"+
+      "      throw(error);\r"+
+      "    });\r"+
+      "  };\r"+
+      "}\r"
+    ],
+    "description": "This snippet will create a react action from a template."
+  },
+  "React redux container component": {
+    "scope": "javascript,react,javascriptreact",
+    "prefix": "react-redux-container-component",
+    "body": [
+      "import React, {PropTypes} from 'react';\r"+
+      "import {connect} from 'react-redux';\r"+
+      "import {bindActionCreators} from 'redux';\r"+
+      "import * as actions from '../../actions/$2';\r"+
+      "\r"+
+      "class $1 extends React.Component {\r"+
+      "  constructor(props, context) {\r"+
+      "   super(props, context);\r"+
+      " }\r"+
+      "\r"+
+      "  render() {  \r"+
+      "    return (\r"+
+      "       <div>\r"+
+      "         <h1></h1>\r"+
+      "       </div>\r"+
+      "    );\r"+
+      "  }\r"+
+      "}\r"+
+      "\r"+
+      "$1.propTypes = {\r"+
+      "  //myProp: PropTypes.string.isRequired\r"+
+      "};\r"+
+      "\r"+
+      "function mapStateToProps(state, ownProps) {\r"+
+      "  return {\r"+
+      "    state: state\r"+
+      "  };\r"+
+      "}\r"+
+      "\r"+
+      "function mapDispatchToProps(dispatch) {\r"+
+      "  return {\r"+
+      "    actions: bindActionCreators(actions, dispatch)\r"+
+      "  };\r"+
+      "}\r"+
+      "\r"+
+      "export default connect(mapStateToProps, mapDispatchToProps)($1);\r"
+    ],
+    "description": "React container template component is hookup to the redux store."
+  },
+  "React redux presentation component": {
+    "scope": "javascript,react,javascriptreact",
+    "prefix": "react-redux-presentation-component",
+    "body": [
+      "import React, {PropTypes} from 'react';\r"+
+      "import {Link} from 'react-router';\r"+
+      "\r"+
+      "const $1 = ({$2}) => {\r"+
+      "  return (\r"+
+      "      <div></div>\r"+
+      "  );\r"+
+      "};\r"+
+      "\r"+
+      "$1.propTypes = {\r"+
+      "  $2: PropTypes.object.isRequired\r"+
+      "};\r"+
+      "\r"+
+      "export default $1;\r"+
+    ],
+    "description": "React container template component is hookup to the redux store."
+  }
+}
