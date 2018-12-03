@@ -1,5 +1,5 @@
 # mendix-react-redux-boilerplate
-The Mendix Custom Widget - ReactJS - Redux boilerplate. Including: Bootstrap 4, jQuery 3, ReactJS, Babel, Redux, Mock API, NodeJS - ExpressJS test server, VSCode snippets and Webpack development and production build configurations.
+The Mendix Custom Widget - ReactJS - Redux boilerplate. Including: Bootstrap 4, jQuery 3, ReactJS, Babel, Redux, Mock API, NodeJS - ExpressJS test server, VSCode snippets and Webpack development and production build configurations, and CreateMPK a Mendix package tool for custom widgets.
 
 # Let's get this party started!
 
