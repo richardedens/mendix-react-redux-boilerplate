@@ -8,8 +8,10 @@ import routes from './routes';
 import {loadContext} from './actions/contextAction';
 import {loadCourses} from './actions/courseActions';
 import {loadAuthors} from './actions/authorActions';
-import './styles/styles.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+// CSS and SCSS
+import './styles/sass/styles.scss';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore();
 store.dispatch(loadContext());
